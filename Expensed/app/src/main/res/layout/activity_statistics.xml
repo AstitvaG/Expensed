@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatisticsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#911077"
+            android:paddingTop="190dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/qanelas_soft_bold"
+                    android:text="Balance of this month:"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/qanelas_soft_bold"
+                        android:text="Rs. "
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/answ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/qanelas_soft_bold"
+                        android:text="0.00"
+                        android:textColor="#fff"
+                        android:textSize="50sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:cardBackgroundColor="#fff"
+                app:cardCornerRadius="50sp"
+                app:cardElevation="10sp"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginTop="30sp"
+                android:layout_marginBottom="20sp"
+                app:contentPaddingBottom="15sp"
+                android:animateLayoutChanges="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="2"
+                    android:layout_marginHorizontal="30sp"
+                    android:layout_marginTop="15sp">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Month wise"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:editable="false"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="10sp"
+                        android:fontFamily="@font/qanelas_soft_medium"
+                        android:id="@+id/mw"/>
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Day wise"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:editable="false"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="10sp"
+                        android:fontFamily="@font/qanelas_soft_medium"
+                        android:id="@+id/dw"/>
+
+
+                </GridLayout>
+
+                <com.hadiidbouk.charts.ChartProgressBar
+                    android:id="@+id/monthlytable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="20sp"
+                    app:hdBarCanBeClick="true"
+                    app:hdBarHeight="170dp"
+                    app:hdBarWidth="50dp"
+                    app:hdBarRadius="25dp"
+                    app:hdBarCanBeToggle="true"
+                    app:hdMaxValue="10"
+                    app:hdEmptyColor="@color/empty"
+                    app:hdProgressColor="@color/progress"
+                    app:hdProgressClickColor="@color/progress_click"
+                    app:hdPinBackgroundColor="@color/pin_background"
+                    app:hdPinTextColor="@color/pin_text"
+                    app:hdPinPaddingBottom="5dp"
+                    app:hdBarTitleColor="@color/bar_title_color"
+                    app:hdBarTitleTxtSize="12sp"
+                    app:hdPinTxtSize="17sp"
+                    app:hdPinMarginTop="10dp"
+                    app:hdPinMarginBottom="55dp"
+                    app:hdPinMarginEnd="22dp"
+                    app:hdBarTitleMarginTop="9dp"
+                    app:hdProgressDisableColor="@color/progress_disable"
+                    app:hdPinDrawable="@drawable/ic_pin"
+                    app:hdBarTitleSelectedColor="#fff"/>
+                <android.support.v7.widget.CardView
+                    xmlns:williamchart="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/chart_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="250sp"
+                    android:layout_marginHorizontal="15sp"
+                    williamchart:cardBackgroundColor="#00a2dc"
+                    williamchart:cardCornerRadius="50sp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingVertical="40sp">
+
+                        <include
+                            android:id="@+id/chart_toolbar"
+                            layout="@layout/card_toolbar" />
+
+                        <com.db.chart.view.LineChartView
+                            android:id="@+id/chart"
+                            android:layout_width="match_parent"
+                            android:layout_height="200sp"
+                            android:layout_below="@id/chart_toolbar"
+                            android:layout_marginBottom="10dp"
+                            williamchart:chart_axis="false"
+                            williamchart:chart_axisBorderSpacing="0dp"
+                            williamchart:chart_labelColor="#304a00" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:cardBackgroundColor="#571048"
+            app:cardCornerRadius="50sp"
+            android:layout_marginTop="-45dp"
+            app:contentPadding="15sp"
+            android:layout_marginBottom="10sp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="50sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="65sp"
+                    android:textColor="#fff"
+                    android:text="Expensed."
+                    android:fontFamily="@font/qanelas_soft_bold"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:text="Manage your monthly allowance Intellegently."
+                    android:layout_marginBottom="40sp"
+                    android:layout_gravity="center"
+                    android:layout_centerVertical="true"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

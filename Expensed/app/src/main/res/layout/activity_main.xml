@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-30dp"
+                app:cardBackgroundColor="#911077"
+                app:cardCornerRadius="50sp"
+                app:contentPaddingBottom="20sp"
+                app:contentPaddingTop="220sp"
+                android:onClick="view_stats">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/qanelas_soft_bold"
+                        android:text="Balance of this month:"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/qanelas_soft_bold"
+                            android:text="Rs. "
+                            android:textColor="#fff"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:id="@+id/answ"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/qanelas_soft_bold"
+                            android:text="0.00"
+                            android:textColor="#fff"
+                            android:textSize="50sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:cardBackgroundColor="#571048"
+                app:cardCornerRadius="50sp"
+                android:layout_marginTop="-45dp"
+                app:contentPadding="15sp"
+                android:layout_marginBottom="10sp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50sp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="65sp"
+                        android:textColor="#fff"
+                        android:text="Expensed."
+                        android:fontFamily="@font/qanelas_soft_bold"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="#fff"
+                        android:gravity="center"
+                        android:text="Manage your monthly allowance Intellegently."
+                        android:layout_marginBottom="40sp"
+                        android:layout_gravity="center"
+                        android:layout_centerVertical="true"/>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="50sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="30sp"
+            app:cardElevation="10sp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Transactions"
+                android:layout_margin="20sp"
+                android:fontFamily="@font/qanelas_soft_bold"
+                android:textSize="30sp"
+                android:textAlignment="center"/>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="400sp"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="50sp"
+            app:cardElevation="10sp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="30sp"
+            android:layout_marginBottom="20sp"
+            app:contentPaddingTop="30sp"
+            app:contentPaddingBottom="30sp"
+            app:contentPadding="30sp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/vg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Transactions so far\nin this month"
+                    android:fontFamily="@font/humblle"
+                    android:textColor="#000"
+                    android:textSize="25sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:layout_width="200sp"
+                    android:layout_height="200sp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/verygood"
+                    android:layout_marginHorizontal="20sp"/>
+
+            </LinearLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/pullToRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/linear">
+                        </LinearLayout>
+
+                </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</ScrollView>

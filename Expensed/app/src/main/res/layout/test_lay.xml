@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:williamchart="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/chart_card"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        williamchart:cardBackgroundColor="#00a2dc"
+        williamchart:cardCornerRadius="50sp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

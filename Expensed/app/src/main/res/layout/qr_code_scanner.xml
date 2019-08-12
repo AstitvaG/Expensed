@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/camerapreview"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="52dp" />
+
+    <EditText
+        android:id="@+id/textView_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapSentences|textMultiLine"
+        android:layout_below="@id/camerapreview"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="263dp"
+        android:layout_marginBottom="68dp"
+        android:gravity="center"
+        android:text="Please focus to qr code"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>

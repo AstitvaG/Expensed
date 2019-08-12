@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Expensed</string>
+    <string name="welcome">Welcome</string>
+    <string name="total_amount_used_this_month">Total Amount used this month:</string>
+    <string name="sdsf">sdsf</string>
+    <string name="refresh_amount">Refresh amount</string>
+    <string name="rs">Rs.</string>
+</resources>
