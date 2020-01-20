@@ -24,4 +24,4 @@ Tap on the amount and new page will display the graphs : Daywise and Monthwise
 3. Some messages are not parsed
 
 ##### To report a new bug or for adding your bank please either raise an issue or drop me a mail or message.
-####### For adding your bank if its not displayed send one of the banks's transaction message.
+> For adding your bank if its not displayed send one of the banks's transaction message.
