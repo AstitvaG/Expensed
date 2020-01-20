@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#ecb5ff"
+        app:cardCornerRadius="10sp"
+        android:layout_marginTop="10dp"
+        app:contentPadding="5dp"
+        app:cardElevation="0sp">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:tag="">
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginVertical="5dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Paid to "
+                            android:fontFamily="@font/qanelas_soft_medium"
+                            android:textSize="10sp"
+                            android:textColor="#000"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9837051030"
+                            android:fontFamily="@font/qanelas_soft_bold"
+                            android:textSize="25sp"
+                            android:textColor="#911077"
+                            android:maxWidth="195sp"
+                            android:id="@+id/reciever"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10.34pm, 13.03.2001 via "
+                            android:fontFamily="@font/qanelas_soft_medium"
+                            android:textSize="15sp"
+                            android:textColor="#000"
+                            android:id="@+id/datetime"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pay"
+                            android:fontFamily="@font/qanelas_soft_bold"
+                            android:textSize="15sp"
+                            android:textColor="#042D6C"
+                            android:id="@+id/mode1"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="tm"
+                            android:fontFamily="@font/qanelas_soft_bold"
+                            android:textSize="15sp"
+                            android:textColor="#00B5EB"
+                            android:id="@+id/mode2"/>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs."
+                        android:fontFamily="@font/qanelas_soft_medium"
+                        android:textSize="10sp"
+                        android:textColor="#000"
+                        android:layout_gravity="right"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3000."
+                        android:fontFamily="@font/qanelas_soft_bold"
+                        android:textSize="25sp"
+                        android:textColor="#000"
+                        android:id="@+id/amount"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

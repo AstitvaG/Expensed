@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#eee">
@@ -141,6 +141,7 @@
             android:layout_height="400sp"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             app:cardBackgroundColor="#fff"
+            android:onClick="gaha"
             app:cardCornerRadius="50sp"
             app:cardElevation="10sp"
             android:layout_marginHorizontal="30dp"
@@ -182,7 +183,8 @@
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -200,4 +202,4 @@
         </android.support.v7.widget.CardView>
     </LinearLayout>
 
-</ScrollView>
+</RelativeLayout>

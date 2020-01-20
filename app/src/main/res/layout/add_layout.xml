@@ -1,7 +1,8 @@
 <LinearLayout
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    android:tag="">
     <RelativeLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -31,8 +32,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="9837051030"
-                    android:fontFamily="@font/qanelas_soft_bold"
+                    android:text="Person Name//::"
+                    android:fontFamily="@font/qanelas_extrabold"
                     android:textSize="25sp"
                     android:textColor="#911077"
                     android:maxWidth="195sp"
@@ -103,6 +104,17 @@
                 android:textSize="25sp"
                 android:textColor="#777"
                 android:id="@+id/amount"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs. 6000"
+                android:fontFamily="@font/qanelas_soft_medium"
+                android:textSize="10sp"
+                android:textColor="#888"
+                android:layout_gravity="right"
+                android:id="@+id/prevValue"
+                android:visibility="gone"/>
 
         </LinearLayout>
 
