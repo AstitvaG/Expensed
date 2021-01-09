@@ -1,5 +1,5 @@
 # Expensed
-#### Put a check on all your payments.
+## `Put a check on all your payments.`
 An app for all expenses combined : Paytm, UPI payments, Card Payments and much more
 
 
